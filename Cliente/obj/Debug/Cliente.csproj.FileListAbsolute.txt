@@ -1,0 +1,11 @@
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\bin\Debug\Cliente.exe.config
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\bin\Debug\Cliente.exe
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\bin\Debug\Cliente.pdb
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\obj\Debug\Cliente.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\obj\Debug\Cliente.Form1.resources
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\obj\Debug\Cliente.Properties.Resources.resources
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\obj\Debug\Cliente.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\obj\Debug\Cliente.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\obj\Debug\Cliente.exe
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\obj\Debug\Cliente.pdb
+C:\Users\PC\source\repos\SERV EV2\SERVTema3Ejercicio1\Cliente\obj\Debug\Cliente.Form2.resources
