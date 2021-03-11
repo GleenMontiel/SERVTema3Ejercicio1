@@ -73,11 +73,30 @@ namespace Cliente
             Form2 form2 = new Form2();
             DialogResult result;
             result = form2.ShowDialog();
+            int port;
+            IPAddress internetP;
+
             switch (result) 
             {
                 case DialogResult.OK:
-                    ip = form2.txtIp.Text.Trim();
-                    puerto = int.Parse(form2.txtPuerto.Text.Trim());
+                    try
+                    {
+                        internetP =  IPAddress.Parse(form2.txtIp.Text.Trim());
+                        ip = internetP.ToString();
+                    }
+                    catch (FormatException) 
+                    {
+                        MessageBox.Show("IP introducida no es válida");
+                    }
+                    if (int.Parse((form2.txtPuerto.Text.Trim())) >= IPEndPoint.MinPort &&
+                        int.Parse((form2.txtPuerto.Text.Trim())) <= IPEndPoint.MaxPort)
+                    {
+                        port = int.Parse((form2.txtPuerto.Text.Trim()));
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Puerto introducido no es válido");
+                    }
                     break;
             }
         }

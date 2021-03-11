@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -11,15 +12,29 @@ namespace SERVTema3Ejercicio1
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
-            bool running = true;
-            IPEndPoint ie = new IPEndPoint(IPAddress.Any, 31416);
+            bool running = true; ;
+            int puerto = 31416;
+            IPEndPoint ie = new IPEndPoint(IPAddress.Any, puerto);
             using (Socket s = new Socket(AddressFamily.InterNetwork,
             SocketType.Stream, ProtocolType.Tcp))
             {
-                s.Bind(ie);
-                s.Listen(10);
+                try
+                {
+                    s.Bind(ie);
+                    Console.WriteLine($"Port {puerto} free");
+                    s.Listen(10);
+                    running = true;
+                }
+                catch (SocketException e) when (e.ErrorCode == (int)
+                        SocketError.AddressAlreadyInUse)
+                {
+                    Console.WriteLine($"Port {puerto} in use");
+                    running = false;
+                }
 
                 while (running)
                 {
@@ -33,7 +48,7 @@ namespace SERVTema3Ejercicio1
                     using (StreamReader sr = new StreamReader(ns))
                     using (StreamWriter sw = new StreamWriter(ns))
                     {
-                        string welcome = "Bienvenido, ejecuta un comando con algún botón";
+                        string welcome = "Bienvenido, ejecuta un comando";
                         sw.WriteLine(welcome);
                         sw.Flush();
                         string command = "";
